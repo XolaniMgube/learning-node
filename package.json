@@ -1,0 +1,27 @@
+{
+  "name": "learning-node",
+  "version": "1.0.0",
+  "description": "learning node",
+  "main": "kids.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XolaniMgube/learning-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/XolaniMgube/learning-node/issues"
+  },
+  "homepage": "https://github.com/XolaniMgube/learning-node#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}

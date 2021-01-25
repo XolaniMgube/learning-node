@@ -22,10 +22,13 @@ const server = http.createServer((req, res) => {
 
     if (req.url == '/') {
         path += 'index.html'
+        res.statusCode = 200
     } else if (req.url == '/about') {
         path += 'about.html'
+         res.statusCode = 200;
     } else {
         path += '404.html'
+         res.statusCode = 404;
     }
 
     fs.readFile(path, (err, data) => {

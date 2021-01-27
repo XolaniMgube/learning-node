@@ -13,7 +13,7 @@ const dbURI =
   "mongodb+srv://xolani:njabs12345@nodetuts.qk2xo.mongodb.net/node-tuts?retryWrites=true&w=majority";
 mongoose
   .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then((result) => app.listen(5001))
+  .then((result) => app.listen(process.env.PORT || 5001))
   .catch((err) => console.log(err));
 
 // to set the view engine to render ejs documents instead of html

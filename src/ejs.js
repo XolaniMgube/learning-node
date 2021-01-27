@@ -3,6 +3,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const Blog = require("./models/blog"); // requiring the models file
+const path = require('path')
 
 // start express app
 const app = express();
@@ -17,10 +18,11 @@ mongoose
 
 // to set the view engine to render ejs documents instead of html
 app.set("view engine", "ejs"); 
+app.set('views', path.join(__dirname, '/views')) // because I'm running the app outside of the source file
 
 
 // Middleware and static files
-app.use(express.static("public"));
+app.use(express.static("src/public"));
 
 // Middleware to get data from the form to the /blogs post request
 app.use(express.urlencoded({ extended: true }))
